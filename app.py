@@ -28,8 +28,8 @@ def get_playlist():
         'calm': ['ambient', 'sleep']
     }
 
-    genres = mood_track_seeds.get(emotion, ['pop', 'mood'])
-
+    genres = mood_track_seeds.get(emotion)
+    
     try:
         results = sp.recommendations(seed_genres=genres, limit=10)
         playlists = []
